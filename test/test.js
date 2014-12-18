@@ -1,4 +1,4 @@
-var assert = require("assert")
+var assert = require("assert");
 describe ('User',function(){
 	describe('#save()', function(){
     it('should save without error', function(done){
@@ -7,4 +7,6 @@ describe ('User',function(){
     })
   })
 })
+
+
 

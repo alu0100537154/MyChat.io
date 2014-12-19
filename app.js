@@ -20,9 +20,9 @@ io.sockets.on('connection', function(socket){
             callback(false);
         }else{
             callback(true);
-            /*console.log('Datos del cliente\n');
+            console.log('Datos del cliente\n');
             console.log(data);
-            console.log('\n');*/
+            console.log('\n');
             socket.username = data;
             /*console.log('Variable Socket\n');
             console.log(socket);*/
@@ -54,9 +54,7 @@ io.sockets.on('connection', function(socket){
             } else{
                 callback("Error: no puede enviar un mensaje vacio");
             }
-        }// else if (msg.substr(0,3) === '/w'){
-           // callback("Error: if you want send a private message, type </w name_user>");
-        //}
+        }
         else{
             io.sockets.emit('chat message', {msg: msg, nick: socket.username});
         }
@@ -73,5 +71,5 @@ io.sockets.on('connection', function(socket){
 
 http.listen(port, function(){
   console.log('Server listening on port ' + port);
-  console.log('MyChat.io is rinning!!!');
+  console.log('MyChat.io is running!!!');
 });

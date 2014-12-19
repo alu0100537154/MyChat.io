@@ -13,10 +13,6 @@
 			#chat{
 				height: 300px;
 			}
-			#chatWrap{
-				float: left;
-				border: 2px #000 solid;
-			}
 			#contentWrap{
 				display: none;
 			}
@@ -30,16 +26,14 @@
 	</head>
 	<body>	
 		<div class = "intro-header">
-			<div class="intro-message">
+			<div class="intro-message fondo">
 				<div class="row">
 					<div id="nickWrap">
-						<p>Introduzca un nombre de usuario</p>
-						<p id="nickError">				
-						</p>
 						<form id="setNick">
-							<input size="35" id="nickname"/>
-							<button>Go!</button>
+							<input class="form-control" placeholder="Introduzca un nombre de usuario" size="35" id="nickname"/>
+							<button class="btn btn-lg btn-info">Go!</button>
 						</form>
+						<p id="nickError"></p>
 					</div>
 					<div class="col-lg-8" id="contentWrap">
 							<div class="panel panel-info">
@@ -47,10 +41,10 @@
 							</div>
 							<form action="">
 									<input id="m" size = "35" autocomplete="off" />
-									<button>Enviar</button>
+									<button class="btn btn-success" id="send">Enviar</button>
 							</form>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-4">
                 		<div id="user_panel" class="panel panel-info panel-user text">
                     		<div class="panel-heading">
                         		<h4>Users Availables</h4>
@@ -79,7 +73,7 @@
     					$('#contentWrap').show();
     					$('#user_panel').show();
     				} else {
-    					$('#nickError').html("<p class='col-md-12 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
+    					$('#nickError').html("<p class='col-md-8 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
     				}
     			});
 
@@ -105,21 +99,20 @@
 			});
 			
 			socket.on('chat message', function(data){
-				//$('#chat').append($('<li>').text(msg));
-				$('#chat').append('<b>' + data.nick + ': <b>' + data.msg + '<br/>');
+				$('#chat').append("<p class='col-md-12 alert-success'>"  + data.nick + ': <b>' + data.msg + '</p>');
 			});
 
 			socket.on('add user', function(data){
 				console.log("Damos la bienvenida al nuevo usuario");
-				$('#chat').append("<p class='col-md-12 alert-warning'>"  + data + ' Se ha unido al chat</p>');
+				$('#chat').append("<p class='col-md-8 alert-warning'>El usuario "  + data + ', se ha unido al chat</p>');
 			});
 
 			socket.on('user disconnect', function(data){
-				$('#chat').append("<p class='col-md-12 alert-danger'>"  + data + ' Ha abandoando el chat</p>');
+				$('#chat').append("<p class='col-md-8 alert-danger'>El usuario "  + data + ', ha abandoando el chat</p>');
 			});
 
 			socket.on('secret', function(data){
-				$('#chat').append("<p class='col-md-12 alert-info'>" + data.nick + ': <b>' + data.msg + '<br/>');
+				$('#chat').append("<p class='col-md-6 alert-info'>" + data.nick + ': <b>' + data.msg + '</p>');
 			});
     	</script>
 	</body>

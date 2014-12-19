@@ -1,4 +1,4 @@
-istemas y Tecnologías Web 2014-2015
+***Sistemas y Tecnologías Web 2014-2015***
 
 #Proyecto Final: MyChat.io
 
@@ -20,7 +20,7 @@ El repositorio está divido en varias ramas, para facilitar el desarrollo de la 
 - *Development* se usa para desarrollar nuevas funcionalidades para la aplicación, es decir versión inestable, sin necesidad de tocar el código que hay en master, para que dicho código permanezca sin cambios hasta que éstos sean definitivos.
 
 - *Production*, es la rama con el código que está puesto en producción en [Heroku]
-- *Gh-pages* contiene la documentación online de la aplicación. [Gh-Pages](http://alu0100537017.github.io/STW-Chat/).
+- *Gh-pages* contiene la documentación online de la aplicación. [Gh-Pages](http://alu0100537017.github.io/MyChat.io/).
 
 #### Modo de empleo **manual**
 

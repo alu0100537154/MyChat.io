@@ -6,7 +6,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 var users = {};
-var port = 3000;
+var port = process.env.PORT || 8000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 

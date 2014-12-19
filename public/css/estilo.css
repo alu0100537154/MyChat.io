@@ -18,6 +18,10 @@
     font-family: "Helvetica";   
 }
 
+#nickWrap{
+    text-align: center;
+}
+
 .panel-send {
     margin-top: 2.5em;
     margin-bottom: 3.5em;
@@ -25,13 +29,14 @@
 }
 
 .panel-user {
-    background-color: rgba(255, 255, 255, 0.6);
+    
     margin-top: 2.5em;
     margin-bottom: 30%;
     margin-left: 3em;   
     border-right: 15em;
     border-left: 50%;
     padding-bottom: 5%;
+    text-align: center;
 }
 
 .fondo {
@@ -44,11 +49,11 @@
 
 .formulario1{
   margin-top:2em;
+  max-width: 30em;
+  text-align: center; 
 }
 
 .formulario2{
-  margin-top:1em;
-  margin-bottom:6em;
   max-width: 20em;
 }
 

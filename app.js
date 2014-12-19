@@ -54,9 +54,7 @@ io.sockets.on('connection', function(socket){
             } else{
                 callback("Error: no puede enviar un mensaje vacio");
             }
-        }// else if (msg.substr(0,3) === '/w'){
-           // callback("Error: if you want send a private message, type </w name_user>");
-        //}
+        }
         else{
             io.sockets.emit('chat message', {msg: msg, nick: socket.username});
         }

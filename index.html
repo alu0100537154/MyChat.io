@@ -26,15 +26,28 @@
 	</head>
 	<body>	
 		<div class = "intro-header">
-			<div class="intro-message fondo">
+			<div class="intro-message fondo"> 
 				<div class="row">
-					<div id="nickWrap">
+				<div id="nickWrap" class="col-lg-8 col-md-offset-2">
+					<div  id="headerwrap">
+						<h1 id="title">Welcome to MyChat.io</h1>
+						<h3 id="title2">An example of a Node.js app</h3>
+					</div>
+					
 						<form id="setNick">
-							<input class="form-control" placeholder="Introduzca un nombre de usuario" size="35" id="nickname"/>
+							<input class="formulario2 form-control" placeholder="Introduzca un nombre de usuario" size="35" id="nickname"/>
 							<button class="btn btn-lg btn-info">Go!</button>
 						</form>
 						<p id="nickError"></p>
 					</div>
+				</div>
+				<!--</div>
+				</div>
+			</div>
+		</div>
+		<div class = "intro-header">
+			<div class="intro-message fondo"> -->
+				<div class="row">
 					<div class="col-lg-8" id="contentWrap">
 							<div class="panel panel-info">
 								<ul id="chat"></ul>
@@ -52,9 +65,10 @@
                     		<div id="users"></div>   
                 		</div>
            			</div>
+           		</div>
 				</div>
 			</div>
-		</div>
+	
 
 			
 		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>

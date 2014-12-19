@@ -19,8 +19,8 @@ El repositorio está divido en varias ramas, para facilitar el desarrollo de la 
 
 - *Development* se usa para desarrollar nuevas funcionalidades para la aplicación, es decir versión inestable, sin necesidad de tocar el código que hay en master, para que dicho código permanezca sin cambios hasta que éstos sean definitivos.
 
-- *Production*, es la rama con el código que está puesto en producción en [Heroku]
-- *Gh-pages* contiene la documentación online de la aplicación. [Gh-Pages](http://alu0100537017.github.io/MyChatio/).
+- *Production*, es la rama con el código que está puesto en producción en [Heroku](https://ancient-wilwood-8397.herokuapp.com)
+- *Gh-pages* contiene la documentación online de la aplicación. [Gh-Pages](http://alu0100537154.github.io/MyChatio).
 
 #### Modo de empleo **manual**
 

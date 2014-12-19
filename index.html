@@ -11,7 +11,7 @@
 		
 		<style type="text/css">
 			#chat{
-				height: 300px;
+				height: 400px;
 			}
 			#contentWrap{
 				display: none;
@@ -32,24 +32,19 @@
 					<div  id="headerwrap">
 						<h1 id="title">Welcome to MyChat.io</h1>
 						<h3 id="title2">An example of a Node.js app</h3>
-					</div>
-					
+					</div>	
 						<form id="setNick">
 							<input class="formulario2 form-control" placeholder="Introduzca un nombre de usuario" size="35" id="nickname"/>
 							<button class="btn btn-lg btn-info">Go!</button>
 						</form>
-						<p id="nickError"></p>
 					</div>
 				</div>
-				
-				<!--<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<div  id="headerwrap">
-							<h1 id="title">Welcome to ChatRoom</h1>	
-							<h3 id="userTitle"></h3>
-						</div>
+				<div class="row">
+					<div class="col-lg-8 col-md-offset-4">
+						<p id="nickError"></p>	
 					</div>
-				</div>-->
+				</div>
+
 				<div class="row">
 					<div class="col-lg-8" id="contentWrap">
 						<div class="panel panel-info">
@@ -87,6 +82,7 @@
     			socket.emit('new user', $nickBox.val(), function(data){
     				if(data){
     					$('#nickWrap').hide();
+    					$('#nickError').hide();
     					$('#contentWrap').show();
     					$('#user_panel').show();
     					$('#userTitle').html(data)
@@ -126,7 +122,7 @@
 			});
 
 			socket.on('user disconnect', function(data){
-				$('#chat').append("<p class='col-md-12 alert-danger'>El usuario "  + data + ', ha abandoando el chat</p>');
+				$('#chat').append("<p class='col-md-12 alert-danger'>El usuario "  + data + ', ha abandonado el chat</p>');
 			});
 
 			socket.on('secret', function(data){

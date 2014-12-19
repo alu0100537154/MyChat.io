@@ -27,11 +27,9 @@ io.sockets.on('connection', function(socket){
             /*console.log('Variable Socket\n');
             console.log(socket);*/
             users[socket.username] = socket;
-            /*console.log('Hash de usuarios\n')
-            console.log(users[socket.name]);*/
-            //socket.broadcast.emit("add user", 'conectado', 'El usuario ' + data + ' se ha conectado');
-            console.log(data);
-            io.emit('add user', data);
+            console.log('Hash de usuarios\n')
+            console.log(users[socket.username]);
+            io.emit('add user', socket.username);
             io.emit('usernames', Object.keys(users));
         }
     });
@@ -63,7 +61,7 @@ io.sockets.on('connection', function(socket){
     socket.on('disconnect', function(data){
         if (!socket.username) return;
         delete users[socket.username];
-        io.emit('user disconnect');
+        io.emit('user disconnect', socket.username);
         io.emit('usernames', Object.keys(users));
     })
 

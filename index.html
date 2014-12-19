@@ -41,21 +41,24 @@
 						<p id="nickError"></p>
 					</div>
 				</div>
-				<!--</div>
-				</div>
-			</div>
-		</div>
-		<div class = "intro-header">
-			<div class="intro-message fondo"> -->
+				
+				<!--<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<div  id="headerwrap">
+							<h1 id="title">Welcome to ChatRoom</h1>	
+							<h3 id="userTitle"></h3>
+						</div>
+					</div>
+				</div>-->
 				<div class="row">
 					<div class="col-lg-8" id="contentWrap">
-							<div class="panel panel-info">
-								<ul id="chat"></ul>
-							</div>
-							<form action="">
-									<input id="m" size = "35" autocomplete="off" />
-									<button class="btn btn-success" id="send">Enviar</button>
-							</form>
+						<div class="panel panel-info">
+							<ul id="chat"></ul>
+						</div>
+						<form action="">
+								<input id="m" size = "35" autocomplete="off" />
+								<button class="btn btn-success" id="send">Enviar</button>
+						</form>
 					</div>
 					<div class="col-lg-4">
                 		<div id="user_panel" class="panel panel-info panel-user text">
@@ -86,6 +89,7 @@
     					$('#nickWrap').hide();
     					$('#contentWrap').show();
     					$('#user_panel').show();
+    					$('#userTitle').html(data)
     				} else {
     					$('#nickError').html("<p class='col-md-6 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
     				}

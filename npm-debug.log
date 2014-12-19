@@ -1,0 +1,473 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/Debo/Desktop/UNI1415/SYTW/chatbasico/MyChat.io',
+5 verbose install   [ 'socket.io', 'express', 'gulp', 'gulp-nodemon', 'gulp-git' ] ]
+6 info preinstall STW_MyChat.io@0.0.1
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'socket.io@1.2.0', null ]
+9 verbose cache add name=undefined spec="socket.io@1.2.0" args=["socket.io@1.2.0",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'socket.io@1.2.0',
+10 verbose parsed url   path: 'socket.io@1.2.0',
+10 verbose parsed url   href: 'socket.io@1.2.0' }
+11 verbose cache add [ 'express@4.10.2', null ]
+12 verbose cache add name=undefined spec="express@4.10.2" args=["express@4.10.2",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'express@4.10.2',
+13 verbose parsed url   path: 'express@4.10.2',
+13 verbose parsed url   href: 'express@4.10.2' }
+14 verbose cache add [ 'gulp@~3.8.10', null ]
+15 verbose cache add name=undefined spec="gulp@~3.8.10" args=["gulp@~3.8.10",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'gulp@~3.8.10',
+16 verbose parsed url   path: 'gulp@~3.8.10',
+16 verbose parsed url   href: 'gulp@~3.8.10' }
+17 verbose cache add [ 'gulp-nodemon@~1.0.4', null ]
+18 verbose cache add name=undefined spec="gulp-nodemon@~1.0.4" args=["gulp-nodemon@~1.0.4",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'gulp-nodemon@~1.0.4',
+19 verbose parsed url   path: 'gulp-nodemon@~1.0.4',
+19 verbose parsed url   href: 'gulp-nodemon@~1.0.4' }
+20 verbose cache add [ 'gulp-git@~0.5.5', null ]
+21 verbose cache add name=undefined spec="gulp-git@~0.5.5" args=["gulp-git@~0.5.5",null]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'gulp-git@~0.5.5',
+22 verbose parsed url   path: 'gulp-git@~0.5.5',
+22 verbose parsed url   href: 'gulp-git@~0.5.5' }
+23 verbose cache add name="socket.io" spec="1.2.0" args=["socket.io","1.2.0"]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: '1.2.0',
+24 verbose parsed url   path: '1.2.0',
+24 verbose parsed url   href: '1.2.0' }
+25 verbose addNamed [ 'socket.io', '1.2.0' ]
+26 verbose addNamed [ '1.2.0', '1.2.0' ]
+27 verbose cache add name="express" spec="4.10.2" args=["express","4.10.2"]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: '4.10.2',
+28 verbose parsed url   path: '4.10.2',
+28 verbose parsed url   href: '4.10.2' }
+29 verbose addNamed [ 'express', '4.10.2' ]
+30 verbose addNamed [ '4.10.2', '4.10.2' ]
+31 verbose cache add name="gulp" spec="~3.8.10" args=["gulp","~3.8.10"]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: '~3.8.10',
+32 verbose parsed url   path: '~3.8.10',
+32 verbose parsed url   href: '~3.8.10' }
+33 verbose addNamed [ 'gulp', '~3.8.10' ]
+34 verbose addNamed [ null, '>=3.8.10-0 <3.9.0-0' ]
+35 verbose cache add name="gulp-nodemon" spec="~1.0.4" args=["gulp-nodemon","~1.0.4"]
+36 verbose parsed url { protocol: null,
+36 verbose parsed url   slashes: null,
+36 verbose parsed url   auth: null,
+36 verbose parsed url   host: null,
+36 verbose parsed url   port: null,
+36 verbose parsed url   hostname: null,
+36 verbose parsed url   hash: null,
+36 verbose parsed url   search: null,
+36 verbose parsed url   query: null,
+36 verbose parsed url   pathname: '~1.0.4',
+36 verbose parsed url   path: '~1.0.4',
+36 verbose parsed url   href: '~1.0.4' }
+37 verbose addNamed [ 'gulp-nodemon', '~1.0.4' ]
+38 verbose addNamed [ null, '>=1.0.4-0 <1.1.0-0' ]
+39 verbose cache add name="gulp-git" spec="~0.5.5" args=["gulp-git","~0.5.5"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: '~0.5.5',
+40 verbose parsed url   path: '~0.5.5',
+40 verbose parsed url   href: '~0.5.5' }
+41 verbose addNamed [ 'gulp-git', '~0.5.5' ]
+42 verbose addNamed [ null, '>=0.5.5-0 <0.6.0-0' ]
+43 silly lockFile 1b93a138-socket-io-1-2-0 socket.io@1.2.0
+44 verbose lock socket.io@1.2.0 /Users/Debo/.npm/1b93a138-socket-io-1-2-0.lock
+45 silly lockFile 787e98b4-express-4-10-2 express@4.10.2
+46 verbose lock express@4.10.2 /Users/Debo/.npm/787e98b4-express-4-10-2.lock
+47 silly lockFile 526cbc63-gulp-3-8-10 gulp@~3.8.10
+48 verbose lock gulp@~3.8.10 /Users/Debo/.npm/526cbc63-gulp-3-8-10.lock
+49 silly lockFile ccb3466f-gulp-nodemon-1-0-4 gulp-nodemon@~1.0.4
+50 verbose lock gulp-nodemon@~1.0.4 /Users/Debo/.npm/ccb3466f-gulp-nodemon-1-0-4.lock
+51 silly lockFile b55cb1f6-gulp-git-0-5-5 gulp-git@~0.5.5
+52 verbose lock gulp-git@~0.5.5 /Users/Debo/.npm/b55cb1f6-gulp-git-0-5-5.lock
+53 silly addNameRange { name: 'gulp', range: '>=3.8.10-0 <3.9.0-0', hasData: false }
+54 silly addNameRange { name: 'gulp-nodemon',
+54 silly addNameRange   range: '>=1.0.4-0 <1.1.0-0',
+54 silly addNameRange   hasData: false }
+55 silly addNameRange { name: 'gulp-git', range: '>=0.5.5-0 <0.6.0-0', hasData: false }
+56 verbose request where is /gulp-nodemon
+57 verbose request registry https://registry.npmjs.org/
+58 verbose request id 065726e900d1d197
+59 verbose url raw /gulp-nodemon
+60 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-nodemon' ]
+61 verbose url resolved https://registry.npmjs.org/gulp-nodemon
+62 verbose request where is https://registry.npmjs.org/gulp-nodemon
+63 info trying registry request attempt 1 at 09:19:18
+64 verbose etag "39EBF61G2O93SQN42MHGDKDY9"
+65 http GET https://registry.npmjs.org/gulp-nodemon
+66 verbose request where is /gulp
+67 verbose request registry https://registry.npmjs.org/
+68 verbose url raw /gulp
+69 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+70 verbose url resolved https://registry.npmjs.org/gulp
+71 verbose request where is https://registry.npmjs.org/gulp
+72 info trying registry request attempt 1 at 09:19:18
+73 verbose etag "2EOOR8PZWFCZS3AX9FNZO1X6W"
+74 http GET https://registry.npmjs.org/gulp
+75 verbose request where is /gulp-git
+76 verbose request registry https://registry.npmjs.org/
+77 verbose url raw /gulp-git
+78 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-git' ]
+79 verbose url resolved https://registry.npmjs.org/gulp-git
+80 verbose request where is https://registry.npmjs.org/gulp-git
+81 info trying registry request attempt 1 at 09:19:18
+82 verbose etag "BVMPU0J43OQ72OESNG4AB0GCQ"
+83 http GET https://registry.npmjs.org/gulp-git
+84 verbose request where is /express
+85 verbose request registry https://registry.npmjs.org/
+86 verbose url raw /express
+87 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+88 verbose url resolved https://registry.npmjs.org/express
+89 verbose request where is https://registry.npmjs.org/express
+90 info trying registry request attempt 1 at 09:19:18
+91 verbose etag "40VQY3OLCDIHXALPBCO2W00J8"
+92 http GET https://registry.npmjs.org/express
+93 verbose request where is /socket.io
+94 verbose request registry https://registry.npmjs.org/
+95 verbose url raw /socket.io
+96 verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+97 verbose url resolved https://registry.npmjs.org/socket.io
+98 verbose request where is https://registry.npmjs.org/socket.io
+99 info trying registry request attempt 1 at 09:19:19
+100 verbose etag "BJ8YDXMPI59YRGX5ASXNHR9YB"
+101 http GET https://registry.npmjs.org/socket.io
+102 http 304 https://registry.npmjs.org/express
+103 silly registry.get cb [ 304,
+103 silly registry.get   { date: 'Fri, 19 Dec 2014 09:19:18 GMT',
+103 silly registry.get     server: 'Apache',
+103 silly registry.get     via: '1.1 varnish',
+103 silly registry.get     'last-modified': 'Fri, 19 Dec 2014 09:19:05 GMT',
+103 silly registry.get     'cache-control': 'max-age=60',
+103 silly registry.get     etag: '"40VQY3OLCDIHXALPBCO2W00J8"',
+103 silly registry.get     age: '36',
+103 silly registry.get     'x-served-by': 'cache-fra1245-FRA',
+103 silly registry.get     'x-cache': 'HIT',
+103 silly registry.get     'x-cache-hits': '2',
+103 silly registry.get     'x-timer': 'S1418980758.886366,VS0,VE0',
+103 silly registry.get     vary: 'Accept',
+103 silly registry.get     'content-length': '0',
+103 silly registry.get     'keep-alive': 'timeout=10, max=50',
+103 silly registry.get     connection: 'Keep-Alive' } ]
+104 verbose etag https://registry.npmjs.org/express from cache
+105 http 304 https://registry.npmjs.org/gulp
+106 silly registry.get cb [ 304,
+106 silly registry.get   { date: 'Fri, 19 Dec 2014 09:19:18 GMT',
+106 silly registry.get     server: 'Apache',
+106 silly registry.get     via: '1.1 varnish',
+106 silly registry.get     'last-modified': 'Fri, 19 Dec 2014 09:19:18 GMT',
+106 silly registry.get     'cache-control': 'max-age=60',
+106 silly registry.get     etag: '"2EOOR8PZWFCZS3AX9FNZO1X6W"',
+106 silly registry.get     age: '7',
+106 silly registry.get     'x-served-by': 'cache-fra1236-FRA',
+106 silly registry.get     'x-cache': 'HIT',
+106 silly registry.get     'x-cache-hits': '1',
+106 silly registry.get     'x-timer': 'S1418980758.891412,VS0,VE1',
+106 silly registry.get     vary: 'Accept',
+106 silly registry.get     'content-length': '0',
+106 silly registry.get     'keep-alive': 'timeout=10, max=50',
+106 silly registry.get     connection: 'Keep-Alive' } ]
+107 verbose etag https://registry.npmjs.org/gulp from cache
+108 http 304 https://registry.npmjs.org/socket.io
+109 silly registry.get cb [ 304,
+109 silly registry.get   { date: 'Fri, 19 Dec 2014 09:19:18 GMT',
+109 silly registry.get     server: 'Apache',
+109 silly registry.get     via: '1.1 varnish',
+109 silly registry.get     'last-modified': 'Fri, 19 Dec 2014 09:19:18 GMT',
+109 silly registry.get     'cache-control': 'max-age=60',
+109 silly registry.get     etag: '"BJ8YDXMPI59YRGX5ASXNHR9YB"',
+109 silly registry.get     age: '0',
+109 silly registry.get     'x-served-by': 'cache-fra1236-FRA',
+109 silly registry.get     'x-cache': 'HIT',
+109 silly registry.get     'x-cache-hits': '2',
+109 silly registry.get     'x-timer': 'S1418980758.913159,VS0,VE0',
+109 silly registry.get     vary: 'Accept',
+109 silly registry.get     'content-length': '0',
+109 silly registry.get     'keep-alive': 'timeout=10, max=50',
+109 silly registry.get     connection: 'Keep-Alive' } ]
+110 verbose etag https://registry.npmjs.org/socket.io from cache
+111 silly addNameRange number 2 { name: 'gulp', range: '>=3.8.10-0 <3.9.0-0', hasData: true }
+112 silly addNameRange versions [ 'gulp',
+112 silly addNameRange   [ '0.0.1',
+112 silly addNameRange     '0.0.2',
+112 silly addNameRange     '0.0.3',
+112 silly addNameRange     '0.0.4',
+112 silly addNameRange     '0.0.5',
+112 silly addNameRange     '0.0.7',
+112 silly addNameRange     '0.0.8',
+112 silly addNameRange     '0.0.9',
+112 silly addNameRange     '0.1.0',
+112 silly addNameRange     '0.2.0',
+112 silly addNameRange     '1.0.0',
+112 silly addNameRange     '1.1.0',
+112 silly addNameRange     '1.2.0',
+112 silly addNameRange     '1.2.1',
+112 silly addNameRange     '2.0.0',
+112 silly addNameRange     '2.0.1',
+112 silly addNameRange     '2.1.0',
+112 silly addNameRange     '2.2.0',
+112 silly addNameRange     '2.3.0',
+112 silly addNameRange     '2.4.0',
+112 silly addNameRange     '2.4.1',
+112 silly addNameRange     '2.6.0',
+112 silly addNameRange     '2.6.1',
+112 silly addNameRange     '2.7.0',
+112 silly addNameRange     '3.0.0',
+112 silly addNameRange     '3.1.1',
+112 silly addNameRange     '3.1.2',
+112 silly addNameRange     '3.1.3',
+112 silly addNameRange     '3.1.4',
+112 silly addNameRange     '3.2.0',
+112 silly addNameRange     '3.2.1',
+112 silly addNameRange     '3.2.2',
+112 silly addNameRange     '3.2.3',
+112 silly addNameRange     '3.2.4',
+112 silly addNameRange     '3.2.5',
+112 silly addNameRange     '3.3.0',
+112 silly addNameRange     '3.3.1',
+112 silly addNameRange     '3.3.2',
+112 silly addNameRange     '3.3.4',
+112 silly addNameRange     '3.4.0',
+112 silly addNameRange     '3.5.0',
+112 silly addNameRange     '3.5.1',
+112 silly addNameRange     '3.5.2',
+112 silly addNameRange     '3.5.5',
+112 silly addNameRange     '3.5.6',
+112 silly addNameRange     '3.6.0',
+112 silly addNameRange     '3.6.1',
+112 silly addNameRange     '3.6.2',
+112 silly addNameRange     '3.7.0',
+112 silly addNameRange     '3.8.0',
+112 silly addNameRange     '3.8.1',
+112 silly addNameRange     '3.8.2',
+112 silly addNameRange     '3.8.3',
+112 silly addNameRange     '3.8.4',
+112 silly addNameRange     '3.8.5',
+112 silly addNameRange     '3.8.6',
+112 silly addNameRange     '3.8.7',
+112 silly addNameRange     '3.8.8',
+112 silly addNameRange     '3.8.9',
+112 silly addNameRange     '3.8.10' ] ]
+113 verbose addNamed [ 'gulp', '3.8.10' ]
+114 verbose addNamed [ '3.8.10', '3.8.10' ]
+115 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+116 verbose lock gulp@3.8.10 /Users/Debo/.npm/f843d0d7-gulp-3-8-10.lock
+117 silly lockFile d0bb09e8-s-org-express-express-4-10-2-tgz https://registry.npmjs.org/express/-/express-4.10.2.tgz
+118 verbose lock https://registry.npmjs.org/express/-/express-4.10.2.tgz /Users/Debo/.npm/d0bb09e8-s-org-express-express-4-10-2-tgz.lock
+119 silly lockFile e37968a4-rg-socket-io-socket-io-1-2-0-tgz https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz
+120 verbose lock https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz /Users/Debo/.npm/e37968a4-rg-socket-io-socket-io-1-2-0-tgz.lock
+121 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-4.10.2.tgz',
+121 verbose addRemoteTarball   'df06dde94d968932829d440a2004c5efe64495b0' ]
+122 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+123 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+124 verbose addRemoteTarball [ 'https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz',
+124 verbose addRemoteTarball   '02f00ffc24626294f46924d4c25ce35a9b940789' ]
+125 silly lockFile 526cbc63-gulp-3-8-10 gulp@~3.8.10
+126 silly lockFile 526cbc63-gulp-3-8-10 gulp@~3.8.10
+127 info retry fetch attempt 1 at 09:19:20
+128 verbose fetch to= /var/folders/nm/d27yfsh93ts9h3g4yxfvvqzw0000gn/T/npm-3284-MBvF5wlG/registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz
+129 info retry fetch attempt 1 at 09:19:20
+130 verbose fetch to= /var/folders/nm/d27yfsh93ts9h3g4yxfvvqzw0000gn/T/npm-3284-MBvF5wlG/registry.npmjs.org/express/-/express-4.10.2.tgz
+131 http GET https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz
+132 http GET https://registry.npmjs.org/express/-/express-4.10.2.tgz
+133 http 304 https://registry.npmjs.org/gulp-git
+134 silly registry.get cb [ 304,
+134 silly registry.get   { date: 'Fri, 19 Dec 2014 09:19:18 GMT',
+134 silly registry.get     server: 'Apache',
+134 silly registry.get     via: '1.1 varnish',
+134 silly registry.get     'last-modified': 'Fri, 19 Dec 2014 09:19:19 GMT',
+134 silly registry.get     'cache-control': 'max-age=60',
+134 silly registry.get     etag: '"BVMPU0J43OQ72OESNG4AB0GCQ"',
+134 silly registry.get     age: '0',
+134 silly registry.get     'x-served-by': 'cache-fra1249-FRA',
+134 silly registry.get     'x-cache': 'HIT',
+134 silly registry.get     'x-cache-hits': '1',
+134 silly registry.get     'x-timer': 'S1418980758.883562,VS0,VE424',
+134 silly registry.get     vary: 'Accept',
+134 silly registry.get     'content-length': '0',
+134 silly registry.get     'keep-alive': 'timeout=10, max=50',
+134 silly registry.get     connection: 'Keep-Alive' } ]
+135 verbose etag https://registry.npmjs.org/gulp-git from cache
+136 silly addNameRange number 2 { name: 'gulp-git', range: '>=0.5.5-0 <0.6.0-0', hasData: true }
+137 silly addNameRange versions [ 'gulp-git',
+137 silly addNameRange   [ '0.0.1',
+137 silly addNameRange     '0.0.2',
+137 silly addNameRange     '0.1.0',
+137 silly addNameRange     '0.1.1',
+137 silly addNameRange     '0.1.2',
+137 silly addNameRange     '0.2.0',
+137 silly addNameRange     '0.2.1',
+137 silly addNameRange     '0.3.0',
+137 silly addNameRange     '0.3.1',
+137 silly addNameRange     '0.3.2',
+137 silly addNameRange     '0.3.3',
+137 silly addNameRange     '0.3.4',
+137 silly addNameRange     '0.3.5',
+137 silly addNameRange     '0.3.6',
+137 silly addNameRange     '0.4.0',
+137 silly addNameRange     '0.4.1',
+137 silly addNameRange     '0.4.2',
+137 silly addNameRange     '0.4.3',
+137 silly addNameRange     '0.5.0',
+137 silly addNameRange     '0.5.1',
+137 silly addNameRange     '0.5.2',
+137 silly addNameRange     '0.5.3',
+137 silly addNameRange     '0.5.4',
+137 silly addNameRange     '0.5.5' ] ]
+138 verbose addNamed [ 'gulp-git', '0.5.5' ]
+139 verbose addNamed [ '0.5.5', '0.5.5' ]
+140 silly lockFile f3be487c-gulp-git-0-5-5 gulp-git@0.5.5
+141 verbose lock gulp-git@0.5.5 /Users/Debo/.npm/f3be487c-gulp-git-0-5-5.lock
+142 silly lockFile f3be487c-gulp-git-0-5-5 gulp-git@0.5.5
+143 silly lockFile f3be487c-gulp-git-0-5-5 gulp-git@0.5.5
+144 silly lockFile b55cb1f6-gulp-git-0-5-5 gulp-git@~0.5.5
+145 silly lockFile b55cb1f6-gulp-git-0-5-5 gulp-git@~0.5.5
+146 http 304 https://registry.npmjs.org/gulp-nodemon
+147 silly registry.get cb [ 304,
+147 silly registry.get   { date: 'Fri, 19 Dec 2014 09:19:18 GMT',
+147 silly registry.get     server: 'Apache',
+147 silly registry.get     via: '1.1 varnish',
+147 silly registry.get     'last-modified': 'Fri, 19 Dec 2014 09:19:19 GMT',
+147 silly registry.get     'cache-control': 'max-age=60',
+147 silly registry.get     etag: '"39EBF61G2O93SQN42MHGDKDY9"',
+147 silly registry.get     age: '0',
+147 silly registry.get     'x-served-by': 'cache-fra1245-FRA',
+147 silly registry.get     'x-cache': 'HIT',
+147 silly registry.get     'x-cache-hits': '1',
+147 silly registry.get     'x-timer': 'S1418980758.912300,VS0,VE725',
+147 silly registry.get     vary: 'Accept',
+147 silly registry.get     'content-length': '0',
+147 silly registry.get     'keep-alive': 'timeout=10, max=50',
+147 silly registry.get     connection: 'Keep-Alive' } ]
+148 verbose etag https://registry.npmjs.org/gulp-nodemon from cache
+149 silly addNameRange number 2 { name: 'gulp-nodemon',
+149 silly addNameRange   range: '>=1.0.4-0 <1.1.0-0',
+149 silly addNameRange   hasData: true }
+150 silly addNameRange versions [ 'gulp-nodemon',
+150 silly addNameRange   [ '0.0.1',
+150 silly addNameRange     '0.0.2',
+150 silly addNameRange     '0.0.3',
+150 silly addNameRange     '0.1.0',
+150 silly addNameRange     '0.1.1',
+150 silly addNameRange     '0.1.2',
+150 silly addNameRange     '1.0.0',
+150 silly addNameRange     '1.0.1',
+150 silly addNameRange     '1.0.2',
+150 silly addNameRange     '1.0.3',
+150 silly addNameRange     '1.0.4' ] ]
+151 verbose addNamed [ 'gulp-nodemon', '1.0.4' ]
+152 verbose addNamed [ '1.0.4', '1.0.4' ]
+153 silly lockFile 225d9878-gulp-nodemon-1-0-4 gulp-nodemon@1.0.4
+154 verbose lock gulp-nodemon@1.0.4 /Users/Debo/.npm/225d9878-gulp-nodemon-1-0-4.lock
+155 silly lockFile 225d9878-gulp-nodemon-1-0-4 gulp-nodemon@1.0.4
+156 silly lockFile 225d9878-gulp-nodemon-1-0-4 gulp-nodemon@1.0.4
+157 silly lockFile ccb3466f-gulp-nodemon-1-0-4 gulp-nodemon@~1.0.4
+158 silly lockFile ccb3466f-gulp-nodemon-1-0-4 gulp-nodemon@~1.0.4
+159 http 200 https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz
+160 http 200 https://registry.npmjs.org/express/-/express-4.10.2.tgz
+161 silly lockFile e37968a4-rg-socket-io-socket-io-1-2-0-tgz https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz
+162 silly lockFile e37968a4-rg-socket-io-socket-io-1-2-0-tgz https://registry.npmjs.org/socket.io/-/socket.io-1.2.0.tgz
+163 silly lockFile 1b93a138-socket-io-1-2-0 socket.io@1.2.0
+164 silly lockFile 1b93a138-socket-io-1-2-0 socket.io@1.2.0
+165 silly lockFile d0bb09e8-s-org-express-express-4-10-2-tgz https://registry.npmjs.org/express/-/express-4.10.2.tgz
+166 silly lockFile d0bb09e8-s-org-express-express-4-10-2-tgz https://registry.npmjs.org/express/-/express-4.10.2.tgz
+167 silly lockFile 787e98b4-express-4-10-2 express@4.10.2
+168 silly lockFile 787e98b4-express-4-10-2 express@4.10.2
+169 error Error: EACCES, mkdir '/Users/Debo/.npm/express/4.10.2'
+169 error  { [Error: EACCES, mkdir '/Users/Debo/.npm/express/4.10.2']
+169 error   errno: 3,
+169 error   code: 'EACCES',
+169 error   path: '/Users/Debo/.npm/express/4.10.2',
+169 error   parent: 'STW_MyChat.io' }
+170 error Please try running this command again as root/Administrator.
+171 error System Darwin 14.0.0
+172 error command "node" "/usr/local/bin/npm" "install"
+173 error cwd /Users/Debo/Desktop/UNI1415/SYTW/chatbasico/MyChat.io
+174 error node -v v0.10.33
+175 error npm -v 1.4.28
+176 error path /Users/Debo/.npm/express/4.10.2
+177 error code EACCES
+178 error errno 3
+179 error stack Error: EACCES, mkdir '/Users/Debo/.npm/express/4.10.2'
+180 verbose exit [ 3, true ]

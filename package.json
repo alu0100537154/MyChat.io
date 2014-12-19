@@ -23,6 +23,11 @@
     "gulp-nodemon": "~1.0.4",
     "gulp-watch": "~3.0.0",
     "gulp-livereload": "~3.0.2",
-    "gulp-git": "~0.5.5"
+    "gulp-git": "~0.5.5",
+    "socket.io": "~1.2.1",
+    "passport.socket.io": "0.0.0",
+    "mongoose-session": "0.0.2",
+    "socket.io-bundle": "~0.1.2",
+    "connect-mongo": "~0.4.2"
   }
 }

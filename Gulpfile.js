@@ -1,23 +1,17 @@
 var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
-  watch = require('gulp-watch'),
-  livereload = require('gulp-livereload'),
   git = require('gulp-git');
+
+// Development Tasks
 
 gulp.task('nodemon', function () {
   nodemon({ script: './bin/www', env: { 'NODE_ENV': 'development' }})
     .on('restart');
 });
 
-gulp.task('watch', function() {
-    var server = livereload();
-    gulp.src(['*.js','routes/*.js', 'public/*.js'], { read: true })
-        .pipe(watch({ emit: 'all' }))
+gulp.task('default', ['nodemon']);
 
-    gulp.watch(['*.js','routes/*.js', 'views/**/*.*', 'public/**/*.*']).on('change', function(file) {
-      server.changed(file.path);
-  });
-});
+//Git Tasks
 
 gulp.task('add', function(){
   return gulp.src('.')
@@ -41,5 +35,3 @@ gulp.task('push-master', function(){
     if(err) throw err;
   });
 });
-
-gulp.task('default', ['nodemon', 'watch']);

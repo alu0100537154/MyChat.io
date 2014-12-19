@@ -14,7 +14,7 @@ module.exports = function(passport) {
             done(err, user);
         });
     });
-    console.log('Inicializamos Passport.js');
+    console.log('Inicializamos Passport.js')
     passport.use(new GoogleStrategy(
         {
             clientID        : configAuth.googleAuth.clientID,
@@ -26,12 +26,18 @@ module.exports = function(passport) {
             process.nextTick(function(){
                 if (!req.user) {
                     User.findOne({ 'google.id' : profile.id }, function(err, user) {
+                        user.google.token = undefined;
                         console.log('Buscamos al usuario en la base de datos MongoDB');
                         if (err){
                             console.log('ERROR!!!');
                             return done(err);
                         }
 
+                        /*if(user.google.token)
+                        {
+                            console.log('Ese usuario ya esta dentro del chat');
+                            return done(err);
+                        }else */
                         if (user) {
                             if (!user.google.token) {
                                 console.log('El usuario ya existe pero no tiene token de acceso');
@@ -51,7 +57,7 @@ module.exports = function(passport) {
                             } 
                         } else {
                             console.log('Es un nuevo usuario, asi que lo añadimos a la base de datos');
-                            var newUser          = new User();
+                            var newUser = new User();
                             console.log('Se los añadimos');
                             console.log(profile.id);
                             console.log(token);

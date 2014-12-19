@@ -16,13 +16,21 @@ var passport = require('passport');
 
 var flash = require('connect-flash');
 
+//var auth = require('passport.socket.io')(cookieParser, mongooseSessionStore);
+
 // Cofigurando la Base de datos
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
 
+/*SessionMongoose = require("mongoose-session"),
+    mongooseSessionStore = new SessionMongoose({
+        url: "mongodb://victor:123456@proximus.modulusmongo.net:27017/ywonA5qa",
+        interval: 120000 
+});*/
+
 mongoose.connect(configDB.url);
 
-app.use(flash());
+//app.use(flash());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -38,7 +46,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/users', users);
 
-app.use(session({secret: 'mySecretKey'}));
+app.use(session({
+  key: 'session',
+  secret: 'my_secret',
+  store :new (require("connect-mongo")(session))({
+        url: 'mongodb://victor:123456@proximus.modulusmongo.net:27017/ywonA5qa'
+  })
+}));
+
 app.use(passport.initialize());
 app.use(passport.session());
 

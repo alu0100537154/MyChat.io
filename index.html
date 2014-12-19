@@ -73,7 +73,7 @@
     					$('#contentWrap').show();
     					$('#user_panel').show();
     				} else {
-    					$('#nickError').html("<p class='col-md-8 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
+    					$('#nickError').html("<p class='col-md-6 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
     				}
     			});
 
@@ -108,7 +108,7 @@
 			});
 
 			socket.on('user disconnect', function(data){
-				$('#chat').append("<p class='col-md-8 alert-danger'>El usuario "  + data + ', ha abandoando el chat</p>');
+				$('#chat').append("<p class='col-md-12 alert-danger'>El usuario "  + data + ', ha abandoando el chat</p>');
 			});
 
 			socket.on('secret', function(data){

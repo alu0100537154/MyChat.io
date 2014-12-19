@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mychat.io - An example of a Chat on Express.js and Socket.io</title>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" >
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/css/landing-page.css">
+		<link rel="stylesheet" type="text/css" href="/css/estilo.css">
+		
+		<style type="text/css">
+			#chat{
+				height: 300px;
+			}
+			#chatWrap{
+				float: left;
+				border: 2px #000 solid;
+			}
+			#contentWrap{
+				display: none;
+			}
+			#user_panel{
+				display: none;	
+			}
+			#userTitle{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>	
+		<div class = "intro-header">
+			<div class="intro-message">
+				<div class="row">
+					<div id="nickWrap">
+						<p>Introduzca un nombre de usuario</p>
+						<p id="nickError">				
+						</p>
+						<form id="setNick">
+							<input size="35" id="nickname"/>
+							<button>Go!</button>
+						</form>
+					</div>
+					<div class="col-lg-8" id="contentWrap">
+							<div class="panel panel-info">
+								<ul id="chat"></ul>
+							</div>
+							<form action="">
+									<input id="m" size = "35" autocomplete="off" />
+									<button>Enviar</button>
+							</form>
+					</div>
+					<div class="col-lg-3">
+                		<div id="user_panel" class="panel panel-info panel-user text">
+                    		<div class="panel-heading">
+                        		<h4>Users Availables</h4>
+                    		</div>
+                    		<div id="users"></div>   
+                		</div>
+           			</div>
+				</div>
+			</div>
+		</div>
+
+			
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    	<script>
+    	
+    		var socket = io();
+    		var $nickForm = $('#setNick');
+    		var $nickBox = $('#nickname');
+
+    		$nickForm.submit(function(){
+    			
+    			socket.emit('new user', $nickBox.val(), function(data){
+    				if(data){
+    					$('#nickWrap').hide();
+    					$('#contentWrap').show();
+    					$('#user_panel').show();
+    				} else {
+    					$('#nickError').html("<p class='col-md-12 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
+    				}
+    			});
+
+    			$nickBox.val('');
+    		});
+
+    		socket.on('usernames', function(data){
+    			var html= '';
+    			for(i = 0; i < data.length; i++)
+    			{
+    				html += data[i] + '<br/>'
+    			}
+    			$('#users').html(html);
+    		})
+
+			$('form').submit(function(e){
+				e.preventDefault();
+				socket.emit('chat message', $('#m').val(), function(data){
+					$('#chat').append('<b>' + data + '<br/>');
+				});
+				$('#m').val('');
+				return false;
+			});
+			
+			socket.on('chat message', function(data){
+				//$('#chat').append($('<li>').text(msg));
+				$('#chat').append('<b>' + data.nick + ': <b>' + data.msg + '<br/>');
+			});
+
+			socket.on('add user', function(data){
+				console.log("Damos la bienvenida al nuevo usuario");
+				$('#chat').append("<p class='col-md-12 alert-warning'>"  + data + ' Se ha unido al chat</p>');
+			});
+
+			socket.on('user disconnect', function(data){
+				$('#chat').append("<p class='col-md-12 alert-danger'>"  + data + ' Ha abandoando el chat</p>');
+			});
+
+			socket.on('secret', function(data){
+				$('#chat').append("<p class='col-md-12 alert-info'>" + data.nick + ': <b>' + data.msg + '<br/>');
+			});
+    	</script>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+
+.panel-chat {
+    margin-left: 3em;   
+    border-right: 15em;
+    border-left: 50%;
+    padding-bottom: 5%;
+}
+
+#chat{
+    font-family: "Helvetica";   
+    padding-left: 2em;
+    color: DimGray;
+}
+
+#user{
+    padding-top: 1em;
+    color: DimGray;
+    font-family: "Helvetica";   
+}
+
+.panel-send {
+    margin-top: 2.5em;
+    margin-bottom: 3.5em;
+    margin-left: 3em;   
+}
+
+.panel-user {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 2.5em;
+    margin-bottom: 30%;
+    margin-left: 3em;   
+    border-right: 15em;
+    border-left: 50%;
+    padding-bottom: 5%;
+}
+
+.fondo {
+    position: relative;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-right: 10em;
+    margin-left: 10em;
+}
+
+.formulario1{
+  margin-top:2em;
+}
+
+.formulario2{
+  margin-top:1em;
+  margin-bottom:6em;
+  max-width: 20em;
+}
+
+.boton{
+    margin-top: 1em;
+    margin-bottom: 2em;   
+}
+
+.boton-chat{
+    margin-top: 1em;
+    margin-bottom: 2em;   
+}
+
+#boton-salir{
+    margin-right: 1em;  
+}
+
+.text{
+    color: #707070;
+    font-family: helvetica;
+}
+
+#header{
+    font-family: "Helvetica";
+    color: white;
+}
+
+.cabecera {
+    color: DimGray;
+    font-family: helvetica;
+    font-size: large;
+}
+
+.space{
+    margin: 50px;
+}
+
+.titulo{
+    color: DimGray;
+    font-family: helvetica;
+    font-style: normal;
+    margin-bottom: 3em;
+}
+
+.imagen{
+    margin-top: 3em;
+}
+
+.footer{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+#scroll{
+    max-height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+/********************************************************/
+/*                   UI - Buttons                       */
+/********************************************************/
+.btn{
+    color:#333;
+    text-shadow: none;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border:0 none;
+}
+.btn:hover {
+    color:#000;
+}
+.btn-lg { 
+    padding:16px 30px;
+    font-size:inherit;
+}
+
+.btn-link {
+    color:rgba(255,255,255,.8);
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+    color:#fff
+}
+.btn-default {
+    background: rgba(255,255,255,.5);
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+    background: rgba(255,255,255,.8);
+}
+.btn-primary {
+    background: rgba(255,255,255,.2);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active {
+    background: rgba(255,255,255,.5);
+}
+
+.theme-invert .btn-default:hover,
+.theme-invert .btn-default:focus,
+.theme-invert .btn-default:active,
+.theme-invert .btn-default.active {
+    background: rgba(0,0,0,.6);
+    color:#fff;
+}
+.theme-invert .btn-primary {
+    background: rgba(0,0,0,.2);
+}
+.theme-invert .btn-primary:hover,
+.theme-invert .btn-primary:focus,
+.theme-invert .btn-primary:active,
+.theme-invert .btn-primary.active {
+    background: rgba(0,0,0,.3);
+    color:#fff;
+}
+
+
+

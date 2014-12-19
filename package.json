@@ -1,7 +1,13 @@
 {
 	"name": "STW_MyChat.io",
 	"version": "0.0.1",
-	"private": "true",
+	"main": "app.js",
+	"scripts": {
+	   "start": "node app.js"
+	},
+	"engines": {
+	   "node": "0.10.x"
+	},
 	"dependencies": {
 		"socket.io":"1.2.0",
 		"express": "4.10.2",

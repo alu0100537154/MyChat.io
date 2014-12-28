@@ -20,15 +20,15 @@ io.sockets.on('connection', function(socket){
             callback(false);
         }else{
             callback(true);
-            console.log('Datos del cliente\n');
-            console.log(data);
-            console.log('\n');
+            //console.log('Datos del cliente\n');
+            //console.log(data);
+            //console.log('\n');
             socket.username = data;
             /*console.log('Variable Socket\n');
             console.log(socket);*/
             users[socket.username] = socket;
-            console.log('Hash de usuarios\n')
-            console.log(users[socket.username]);
+            //console.log('Hash de usuarios\n')
+            //console.log(users[socket.username]);
             io.emit('add user', socket.username);
             io.emit('usernames', Object.keys(users));
         }

@@ -50,7 +50,7 @@
 						<div class="panel panel-info">
 							<ul id="chat"></ul>
 						</div>
-						<form action="">
+						<form id="formulario">
 								<input id="m" size = "35" autocomplete="off" />
 								<button class="btn btn-success" id="send">Enviar</button>
 						</form>
@@ -75,10 +75,10 @@
     	
     		var socket = io();
     		var $nickForm = $('#setNick');
+    		var $chatForm = $('#formulario');
     		var $nickBox = $('#nickname');
 
     		$nickForm.submit(function(){
-    			
     			socket.emit('new user', $nickBox.val(), function(data){
     				if(data){
     					$('#nickWrap').hide();
@@ -90,7 +90,6 @@
     					$('#nickError').html("<p class='col-md-6 alert-danger'>Ese nombre de usuario ya eta cogido</p>");
     				}
     			});
-
     			$nickBox.val('');
     		});
 
@@ -103,8 +102,7 @@
     			$('#users').html(html);
     		})
 
-			$('form').submit(function(e){
-				e.preventDefault();
+			$('form').submit(function(){
 				socket.emit('chat message', $('#m').val(), function(data){
 					$('#chat').append('<b>' + data + '<br/>');
 				});
@@ -112,17 +110,17 @@
 				return false;
 			});
 			
-			socket.on('chat message', function(data){
-				$('#chat').append("<p class='col-md-12 alert-success'>"  + data.nick + ': <b>' + data.msg + '</p>');
+			socket.on('chat wrap', function(data){
+				$('#chat').append("<p class='col-md-8 alert-success'>"  + data.nick + ':chat: <b>' + data.msg + '</p>');
 			});
 
-			socket.on('add user', function(data){
-				console.log("Damos la bienvenida al nuevo usuario");
+			socket.on('usuario nuevo', function(data){
+				//console.log("Damos la bienvenida al usuario " + data);
 				$('#chat').append("<p class='col-md-8 alert-warning'>El usuario "  + data + ', se ha unido al chat</p>');
 			});
 
 			socket.on('user disconnect', function(data){
-				$('#chat').append("<p class='col-md-12 alert-danger'>El usuario "  + data + ', ha abandonado el chat</p>');
+				$('#chat').append("<p class='col-md-8 alert-danger'>El usuario "  + data + ', ha abandonado el chat</p>');
 			});
 
 			socket.on('secret', function(data){

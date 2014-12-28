@@ -29,7 +29,7 @@ io.sockets.on('connection', function(socket){
             users[socket.username] = socket;
             //console.log('Hash de usuarios\n')
             //console.log(users[socket.username]);
-            io.emit('add user', socket.username);
+            io.emit('usuario nuevo', socket.username);
             io.emit('usernames', Object.keys(users));
         }
     });
@@ -54,7 +54,7 @@ io.sockets.on('connection', function(socket){
             }
         }
         else{
-            io.sockets.emit('chat message', {msg: msg, nick: socket.username});
+            io.emit('chat wrap', {msg: msg, nick: socket.username});
         }
     });
 

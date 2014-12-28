@@ -5,33 +5,44 @@
 
 ###Objetivo
  
-El objetivo de este proyecto ha sido crear un chat en el que se puedan comunicar varios usuarios en el cual también tengan la opción de comunicarse de manera privada mediante mensajes privados. 
+El objetivo de este proyecto es crear un chat usando [Node.js](http://nodejs.org/) y [Socket.io](http://socket.io/), en el que se puedan comunicar varios usuarios de manera concurrente y que también tiene la posibilidad de mandar mensajes privados a otro usuario.
 
 ###Descripción
 
-Para acceder a la aplicación el usuario tendrá que darse de alta, si el usuario ya existe saltará un mensaje de error.
+Para acceder a la aplicación habrá que registrarse con un nombre de usuario, si el nombre de usuario escogido ya existe, saltará un mensaje de error.
 
 ###Ramas
 
 El repositorio está divido en varias ramas, para facilitar el desarrollo de la aplicación:
 
-- *Master* es la rama principal de la aplicación, donde está todo el código de la aplicación de la última versión. Vendría a ser nuestra rama *release*.
+- *Master* es la rama principal de la aplicación, donde está todo el código de la aplicación de la última versión.
 
-- *Development* se usa para desarrollar nuevas funcionalidades para la aplicación, es decir versión inestable, sin necesidad de tocar el código que hay en master, para que dicho código permanezca sin cambios hasta que éstos sean definitivos.
+- Las ramas *desarrollo*, *oauth* y *test-oauth*, son de una versión, aún no acabada, de la misma aplicación pero usando [Passport.js](http://passportjs.org/), el protocolo Oauth y MongoDB para registrarte en el chat con las credenciales de tu cuenta de Google.
 
-- *Production*, es la rama con el código que está puesto en producción en [Heroku](https://ancient-wilwood-8397.herokuapp.com)
 - *Gh-pages* contiene la documentación online de la aplicación. [Gh-Pages](http://alu0100537154.github.io/MyChatio).
 
-#### Modo de empleo **manual**
+#### Despliegue
+El despliegue de la aplicación se ha hecho usando [NodeJitsu](https://www.nodejitsu.com/), que es una plataforma parecida a [Heroku](https://id.heroku.com/login), pero especializada en projectos basados en Node.js.
+- [Accede a MyChat.io](http://victjr-example_chat_socket.io.nodejitsu.com)
 
-Si se desea se puede descargar desde la rama master la aplicación para probarla en local, verla o modificarla al gusto de cada uno. Solo tiene que hacer:
+#### Modo de empleo manual
 
-  git clone https://github.com/alu0100537154/MyChat.io.git
+Si desea probar la aplicación en local, para ver el código, modificarla o lo que sea, siga estos pasos:
+- Clone el repositorio en su máquina:
+`$ git clone https://github.com/alu0100537154/MyChatio.git`
 
-Una vez descargada la aplicación
- 
-- Para correr la aplicación si tienes instalado gulp `$gulp` o simplemente `$node app.js`
-- Iremos al puerto **localhost:8000** en nuestro navegador y ya podremos interactuar con la aplicación.
+Una vez descargada, la aplicación require que esté instalado:
+- [Node.js](http://nodejs.org/download/)
+- [Npm](https://www.npmjs.com/)
+- [Gulp](http://gulpjs.com/) (opcional)
+
+Seguidamente en el directorio de nuestro proyecto, debemos ejecutar `$ npm install` para instalar todas las dependencias de nuestro proyecto. Se instalarán dentro de la carpeta *node_modules* en la carpeta raíz.
+
+Para ejecutar la aplicación:
+- Esctibiremos en una terminal `$ node app.js`
+- Si tenemos instalado *gulp*, simplemente escribimos `$ gulp`
+
+Iremos al puerto **localhost:8000** en nuestro navegador y ya podremos interactuar con la aplicación.
 
 ###Autores
 
